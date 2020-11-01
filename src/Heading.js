@@ -21,6 +21,9 @@ export class Heading extends React.Component {
                     <li class="nav-item">
                         <a class="nav-link" href="{{url_for('list_users')}}">Usuarios</a>
                     </li>
+                    <li class="nav-tem">
+                        <button class="nav-link"> Procesos </button>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">MDLR</a>
                     </li>
