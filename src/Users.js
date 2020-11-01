@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router,Switch,Route,Link} from 'react-router-dom';
 
 export class Users extends React.Component {
     constructor(props) {
@@ -24,7 +25,7 @@ export class Users extends React.Component {
             //<div> {this.state.userList.map(s => (<li>{s}</li>))} </div>
             <div>
                 <form class="form-inline my-2 my-lg-0">
-                    <a class="btn btn-primary m-3 " href="{{url_for('create_user')}}" role="button">Crear Usuario</a>
+                    <Link to="/create_user" class="btn btn-primary m-3" role="button"> Crear usuario </Link>
                 <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" />
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

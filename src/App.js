@@ -5,6 +5,7 @@ import { Users } from './Users';
 import { Heading } from './Heading';
 import { Process } from './Process';
 import { BrowserRouter as Router,Switch,Route,Link} from 'react-router-dom';
+import { CreateUser } from './CreateUser';
 
 function App() {
     var isVisible = false;
@@ -28,12 +29,16 @@ function App() {
                     <li class="nav-tem">
                       <Link to="/process" class="nav-link">Procesos</Link>
                     </li>
+                    <li class="nav-tem">
+                      <Link to="/create_user" class="nav-link"> Crear usuari</Link>
+                    </li>
                     </ul>
                 </div>
                 </nav>
             </div>
             <Route path="/users" component={Users} />
             <Route path="/process" component={Process} />
+            <Route path="/create_user" component={CreateUser} />
       </div>
       </Router>
     )
