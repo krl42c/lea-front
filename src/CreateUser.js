@@ -4,9 +4,34 @@ export class CreateUser extends React.Component {
     constructor(props) {
         super();
     }
-    saveUser = () => {
-        
+   /* saveUser = (user, password) => {
+        fetch("/api/create_user", {
+            method:"POST",
+            headers: {
+                'Accept': 'application/json',
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify({
+                username: user,
+                auth: password
+            })
+        })
+    }*/
+
+    saveUser(user,password) {
+        fetch("/api/create_user", {
+            method:"POST",
+            headers: {
+                'Accept': 'application/json',
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify({
+                username: user,
+                auth: password
+            })
+        })
     }
+
     render() {
         return(
             <div>
@@ -29,7 +54,7 @@ export class CreateUser extends React.Component {
                     </label>
                     </div>
                         <br />
-                <button type="submit" class="btn btn-primary">Guardar</button>
+                <button onClick={this.saveUser("mdlr","mdlr")} type="submit" class="btn btn-primary">Guardar</button>
                 </form> 
             </div>
         )

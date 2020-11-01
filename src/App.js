@@ -6,6 +6,7 @@ import { Heading } from './Heading';
 import { Process } from './Process';
 import { BrowserRouter as Router,Switch,Route,Link} from 'react-router-dom';
 import { CreateUser } from './CreateUser';
+import { Ram } from './Ram';
 
 function App() {
     var isVisible = false;
@@ -26,11 +27,14 @@ function App() {
                     <li class="nav-item">
                       <Link to="/users" class="nav-link"> Usuarios </Link>
                     </li>
-                    <li class="nav-tem">
+                    <li class="nav-item">
                       <Link to="/process" class="nav-link">Procesos</Link>
                     </li>
-                    <li class="nav-tem">
+                    <li class="nav-item">
                       <Link to="/create_user" class="nav-link"> Crear usuari</Link>
+                    </li>
+                    <li class="nav-item">
+                      <Link to="/memory" class="nav-link"> Memoria </Link>
                     </li>
                     </ul>
                 </div>
@@ -39,6 +43,7 @@ function App() {
             <Route path="/users" component={Users} />
             <Route path="/process" component={Process} />
             <Route path="/create_user" component={CreateUser} />
+            <Route path="/memory" component={Ram} />
       </div>
       </Router>
     )
