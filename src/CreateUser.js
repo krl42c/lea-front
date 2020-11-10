@@ -19,17 +19,19 @@ export class CreateUser extends React.Component {
     }*/
 
     saveUser(user,password) {
-        fetch("/api/create_user", {
-            method:"POST",
-            headers: {
-                'Accept': 'application/json',
-                'Content-type': 'application/json'
-            },
-            body: JSON.stringify({
-                username: user,
-                auth: password
+		return function() {
+            fetch("/api/create_user", {
+                method:"POST",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify({
+                    username: user,
+                    auth: password
+                })
             })
-        })
+		}
     }
 
     render() {
