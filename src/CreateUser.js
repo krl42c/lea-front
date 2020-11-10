@@ -3,6 +3,10 @@ import React from 'react';
 export class CreateUser extends React.Component {
     constructor(props) {
         super();
+        this.state = {
+            username: null,
+            password: null
+        }
     }
    /* saveUser = (user, password) => {
         fetch("/api/create_user", {
@@ -34,29 +38,21 @@ export class CreateUser extends React.Component {
 		}
     }
 
+
     render() {
         return(
             <div>
                 <form class="m-4 p-3 border border-primary rounded">
                 <div class="form-group">
                     <label >Nombre de Usuario</label>
-                    <input class="form-control" id="user_name" />
+                    <input class="form-control" id="user_name" name="usuario" onChange={event => this.setState({username: event.target.value})}/>
                 </div>
                 <div class="form-group">
                     <label>Contraseña</label>
-                    <input type="password" class="form-control" id="password" />
+                    <input type="password" class="form-control" id="password" onChange={event => this.setState({password: event.target.value})}/>
                 </div>
-                    <div>
-                    <label>Año de nacimiento: <input type="number" name="nacido" min="1900" max="2005" /></label>
-                    </div>
-                    <div>
-                    <label>Sexo:
-                        <input type="radio" name="hm" value="h" /> Hombre
-                        <input type="radio" name="hm" value="m" /> Mujer
-                    </label>
-                    </div>
-                        <br />
-                <button onClick={this.saveUser("mdlr","mdlr")} type="submit" class="btn btn-primary">Guardar</button>
+                    <br />
+                <button onClick={this.saveUser(this.state.username,this.state.password)} type="submit" class="btn btn-primary">Guardar</button>
                 </form> 
             </div>
         )
