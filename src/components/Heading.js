@@ -16,7 +16,7 @@ export class Heading extends React.Component {
          <div className='div-barra-busqueda'>
                 <div>
                     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm p-3 bg-white rounded">
-                        <h3 class="ml-1 mr-2">Linux Easy Admin</h3>
+                        
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
