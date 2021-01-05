@@ -6,20 +6,20 @@ import {
 } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
-export class GraficaPie extends React.Component {
+export class Bateria extends React.Component {
   constructor(props) {
       super();
       this.state = {
-          usage : null
+          Value : null
       };
   }
 
   componentDidMount() {
-      fetch("/api/ram")
+      fetch("/api/battery")
         .then(res => res.json())
         .then(json => {
           this.setState({
-              usage : json.Usage
+              Value : json.Value
           })
         });
     }
@@ -27,8 +27,8 @@ export class GraficaPie extends React.Component {
 
         return(
           <CircularProgressbar
-      value={this.state.usage}
-      text={`${this.state.usage}%`}
+      value={this.state.Value}
+      text={`${this.state.Value}%`}
       background
       backgroundPadding={6}
       styles={buildStyles({
