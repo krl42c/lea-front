@@ -4,7 +4,7 @@ import { Process } from './Process';
 import { CreateUser } from './CreateUser';
 import { Ram } from './Ram';
 import { Home } from './Home';
-import { BrowserRouter as Router,Switch,Route,Link} from 'react-router-dom';
+import { BrowserRouter as Router,Switch,Route,Link,Redirect} from 'react-router-dom';
 
 export class Heading extends React.Component {
     constructor(props) {
@@ -42,6 +42,9 @@ export class Heading extends React.Component {
                     </div>
                     </nav>
                 </div>
+		<Route path="/">
+			<Redirect to="/Home"/>
+		</Route>
 		<Route path="/Home" component={Home} />
                 <Route path="/users" component={Users} />
                 <Route path="/process" component={Process} />
