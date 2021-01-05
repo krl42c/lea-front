@@ -5,7 +5,7 @@ import { CreateUser } from './CreateUser';
 import { Ram } from './Ram';
 import { Home } from './Home';
 import { BrowserRouter as Router,Switch,Route,Link,Redirect} from 'react-router-dom';
-
+import PageNotFound from './PageNotFound';
 export class Heading extends React.Component {
     constructor(props) {
         super();
@@ -43,11 +43,13 @@ export class Heading extends React.Component {
             		<Route path="/">
             			<Redirect to="/Home"/>
             		</Route>
-            		<Route path="/Home" component={Home} />
-                <Route path="/users" component={Users} />
-                <Route path="/process" component={Process} />
-                <Route path="/create_user" component={CreateUser} />
-
+                <Switch>
+              		<Route path="/Home" component={Home} />
+                  <Route path="/users" component={Users} />
+                  <Route path="/process" component={Process} />
+                  <Route path="/create_user" component={CreateUser} />
+                  <Route component={PageNotFound}/>
+                </Switch>
           </div>
           </Router>
         )

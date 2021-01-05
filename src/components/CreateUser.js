@@ -42,7 +42,7 @@ export class CreateUser extends React.Component {
     render() {
         return(
             <div>
-                <form class="m-4 p-3 border border-primary rounded">
+                <form class="m-4 p-3 border border-primary rounded text-white">
                 <div class="form-group">
                     <label >Nombre de Usuario</label>
                     <input class="form-control" id="user_name" name="usuario" onChange={event => this.setState({username: event.target.value})}/>
