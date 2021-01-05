@@ -12,7 +12,7 @@ export class Home extends React.Component {
         return(
           <div className='div-body'>
 
-            <header className='header'>
+            <header data-aos="zoom-out-down" className='header'>
               <h1>Linux Easy Admin</h1>
               <p>Bienvenido a Linux Easy Admin, tener el control de tu PC en Linux nunca había sido tan fácil</p>
 

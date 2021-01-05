@@ -19,7 +19,7 @@ function App() {
   });
 }, []);
     return(
-      <div className='div-body bg-dark'>
+      <div className='div-body bg-dark text-white'>
         <Heading/>
 
       </div>
