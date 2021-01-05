@@ -16,8 +16,8 @@ export class Heading extends React.Component {
           <Router>
          <div className='div-barra-busqueda'>
                 <div>
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm p-3 bg-white rounded">
-                        
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm p-3 bg-dark rounded">
+
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -35,21 +35,19 @@ export class Heading extends React.Component {
                         <li class="nav-item">
                           <Link to="/create_user" class="nav-link"> Crear usuario</Link>
                         </li>
-                        <li class="nav-item">
-                          <Link to="/memory" class="nav-link"> Memoria </Link>
-                        </li>
                         </ul>
                     </div>
                     </nav>
                 </div>
-		<Route path="/">
-			<Redirect to="/Home"/>
-		</Route>
-		<Route path="/Home" component={Home} />
+
+            		<Route path="/">
+            			<Redirect to="/Home"/>
+            		</Route>
+            		<Route path="/Home" component={Home} />
                 <Route path="/users" component={Users} />
                 <Route path="/process" component={Process} />
                 <Route path="/create_user" component={CreateUser} />
-                <Route path="/memory" component={Ram} />
+
           </div>
           </Router>
         )
