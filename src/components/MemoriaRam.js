@@ -19,7 +19,7 @@ export class MemoriaRam extends React.Component {
         .then(res => res.json())
         .then(json => {
           this.setState({
-              usage : json.Usage
+              usage : json.Value
           })
         });
     }
