@@ -1,4 +1,5 @@
 .div-body{
+  height: 100%;
   font-family: "Lucida Console", "Courier New", monospace;
 }
 .header{
@@ -9,13 +10,14 @@
 .header h1{
   text-align: center;
   font-size: 300%;
-
-
 }
 .header p{
   margin-top: 1%;
   text-align: center;
   font-size: 80%;
+}
+.div-barra-busqueda{
+  margin: 0.5%;
 }
 .div-cuerpo{
   padding: 2%;
@@ -35,6 +37,12 @@
   width: 20%;
 }
 .div-bateria{
+
+  margin: auto;
+  border: solid yellow 2px;
+  width: 20%;
+}
+.div-cpu{
 
   margin: auto;
   border: solid yellow 2px;

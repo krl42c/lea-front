@@ -53,7 +53,7 @@ export class CreateUser extends React.Component {
                 </div>
                     <br />
                 <button onClick={this.saveUser(this.state.username,this.state.password)} type="submit" class="btn btn-primary">Guardar</button>
-                </form> 
+                </form>
             </div>
         )
     }

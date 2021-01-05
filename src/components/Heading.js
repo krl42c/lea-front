@@ -14,8 +14,8 @@ export class Heading extends React.Component {
     render() {
         return(
           <Router>
-         <div className='div-barra-busqueda'>
-                <div>
+         <div>
+                <div className='div-barra-busqueda'>
                     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm p-3 bg-dark rounded">
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

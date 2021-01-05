@@ -1,7 +1,7 @@
 import React from 'react';
 import { Bateria } from './Bateria';
+import { CPU } from './CPU';
 import { Parallax } from 'react-parallax';
-import { Ram } from './Ram';
 import { MemoriaRam } from './MemoriaRam';
 import fondo1 from '../images/fondo1.png';
 import header from '../images/header.png';
@@ -33,6 +33,11 @@ export class Home extends React.Component {
               <div className='div-bateria'>
                   <h2>Batería:</h2>
                   <Bateria/>
+              </div>
+
+              <div className='div-cpu'>
+                  <h2>CPU:</h2>
+                  <CPU/>
               </div>
 
             </div>
