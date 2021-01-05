@@ -15,33 +15,9 @@ function App() {
     return(
       <div className='div-body'>
       <Heading/>
-      <Parallax blur={{ min: -15, max: 15 }} bgImage={header}>
       <header className='header'>
         <h1>Linux Easy Admin</h1>
-        <p>Bienvenido a Linux Easy Admin, tener el control de tu PC en Linux nunca había sido tan fácil</p>
-
       </header>
-      </Parallax>
-      <Parallax bgImage={fondo1}>
-      <div className='div-cuerpo'>
-
-        <div className='div-graficas'>
-
-          <div className='div-ram'>
-            <h2>Memoria Ram:</h2>
-            <MemoriaRam/>
-          </div>
-
-          <div className='div-bateria'>
-              <h2>Batería:</h2>
-              <Bateria/>
-          </div>
-
-        </div>
-
-      </div>
-      </Parallax>
-
       </div>
 
 

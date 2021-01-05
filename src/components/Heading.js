@@ -3,6 +3,7 @@ import { Users } from './Users';
 import { Process } from './Process';
 import { CreateUser } from './CreateUser';
 import { Ram } from './Ram';
+import { Home } from './Home';
 import { BrowserRouter as Router,Switch,Route,Link} from 'react-router-dom';
 
 export class Heading extends React.Component {
@@ -23,7 +24,7 @@ export class Heading extends React.Component {
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <Link to="/" class="nav-link"> Inicio </Link>
+                            <Link to="/Home" class="nav-link"> Inicio </Link>
                         </li>
                         <li class="nav-item">
                           <Link to="/users" class="nav-link"> Usuarios </Link>
@@ -41,6 +42,7 @@ export class Heading extends React.Component {
                     </div>
                     </nav>
                 </div>
+		<Route path="/Home" component={Home} />
                 <Route path="/users" component={Users} />
                 <Route path="/process" component={Process} />
                 <Route path="/create_user" component={CreateUser} />
