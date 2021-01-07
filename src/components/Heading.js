@@ -5,6 +5,7 @@ import { CreateUser } from './CreateUser';
 import { Ram } from './Ram';
 import { Home } from './Home';
 import { Paquetes } from './Paquetes';
+import { Terminal } from './terminal';
 import { BrowserRouter as Router,Switch,Route,Link,Redirect} from 'react-router-dom';
 import PageNotFound from './PageNotFound';
 export class Heading extends React.Component {
@@ -36,6 +37,9 @@ export class Heading extends React.Component {
                         <li class="nav-item">
                           <Link to="/paquetes" class="nav-link">Paquetes</Link>
                         </li>
+                        <li class="nav-item">
+                          <Link to="/consola" class="nav-link">Consola</Link>
+                        </li>
                         </ul>
                     </div>
                     </nav>
@@ -50,6 +54,7 @@ export class Heading extends React.Component {
                   <Route path="/process" component={Process} />
                   <Route path="/create_user" component={CreateUser} />
                   <Route path="/paquetes" component={Paquetes} />
+                  <Route path="/consola" component={Terminal} />
                   <Route component={PageNotFound}/>
                 </Switch>
           </div>
