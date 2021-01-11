@@ -3,6 +3,7 @@ import { Bateria } from './Bateria';
 import { CPU } from './CPU';
 import { Parallax } from 'react-parallax';
 import { MemoriaRam } from './MemoriaRam';
+import { Timer } from './timer';
 export class Home extends React.Component {
     constructor(props) {
         super();
@@ -19,7 +20,7 @@ export class Home extends React.Component {
             </header>
 
             <div className='div-cuerpo'>
-
+                <Timer />
               <div className='div-graficas'>
 
                 <div data-aos="flip-left" className='div-ram'>

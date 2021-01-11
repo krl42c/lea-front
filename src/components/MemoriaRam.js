@@ -8,21 +8,27 @@ import "react-circular-progressbar/dist/styles.css";
 
 export class MemoriaRam extends React.Component {
   constructor(props) {
-      super();
+      super(props);
       this.state = {
           usage : null
       };
   }
-
+  tick() {
+    fetch("/api/ram")
+      .then(res => res.json())
+      .then(json => {
+        this.setState({
+            usage : json.Value
+        })
+      });
+  }
   componentDidMount() {
-      fetch("/api/ram")
-        .then(res => res.json())
-        .then(json => {
-          this.setState({
-              usage : json.Value
-          })
-        });
-    }
+    this.interval = setInterval(() => this.tick(), 300);
+  }
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
     render() {
 
         return(

@@ -8,21 +8,26 @@ import "react-circular-progressbar/dist/styles.css";
 
 export class Bateria extends React.Component {
   constructor(props) {
-      super();
+      super(props);
       this.state = {
-          Value : null
+          usage : null
       };
   }
-
+  tick() {
+    fetch("/api/battery")
+      .then(res => res.json())
+      .then(json => {
+        this.setState({
+            usage : json.Value
+        })
+      });
+  }
   componentDidMount() {
-      fetch("/api/battery")
-        .then(res => res.json())
-        .then(json => {
-          this.setState({
-              Value : json.Value
-          })
-        });
-    }
+    this.interval = setInterval(() => this.tick(), 300);
+  }
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
     render() {
 
         return(
