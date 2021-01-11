@@ -23,7 +23,14 @@ export class Bateria extends React.Component {
       });
   }
   componentDidMount() {
-    this.interval = setInterval(() => this.tick(), 300);
+    fetch("/api/battery")
+      .then(res => res.json())
+      .then(json => {
+        this.setState({
+            usage : json.Value
+        })
+      });
+    this.interval = setInterval(() => this.tick(), 60000);
   }
   componentWillUnmount() {
     clearInterval(this.interval);

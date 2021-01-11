@@ -23,7 +23,14 @@ export class CPU extends React.Component {
       });
   }
   componentDidMount() {
-    this.interval = setInterval(() => this.tick(), 300);
+    fetch("/api/cpu")
+	  .then(res => res.json())
+	  .then(json => {
+		this.setState({
+			usage : json.Value
+		})
+	  });
+    this.interval = setInterval(() => this.tick(), 2000);
   }
   componentWillUnmount() {
     clearInterval(this.interval);
