@@ -23,7 +23,7 @@ export class MemoriaRam extends React.Component {
       });
   }
   componentDidMount() {
-    this.interval = setInterval(() => this.tick(), 300);
+    this.interval = setInterval(() => this.tick(), 1000);
   }
   componentWillUnmount() {
     clearInterval(this.interval);
