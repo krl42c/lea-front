@@ -21,7 +21,7 @@ export class Home extends React.Component {
             </header>
 
             <div className='div-cuerpo'>
-                <Timer />
+
               <div className='div-graficas'>
 
                 <div data-aos="flip-left" className='div-ram'>
@@ -34,7 +34,7 @@ export class Home extends React.Component {
                     <Bateria/>
                 </div>
 
-                <div data-aos="flip-right" className='div-cpu'>
+                <div data-aos="flip-up" className='div-cpu'>
                     <h2>CPU:</h2>
                     <CPU/>
                 </div>
