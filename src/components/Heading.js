@@ -48,7 +48,7 @@ export class Heading extends React.Component {
             		<Route path="/">
             			<Redirect to="/Home"/>
             		</Route>
-                <Switch>
+                
               		<Route path="/Home" component={Home} />
                   <Route path="/users" component={Users} />
                   <Route path="/process" component={Process} />
@@ -56,7 +56,7 @@ export class Heading extends React.Component {
                   <Route path="/paquetes" component={Paquetes} />
                   <Route path="/consola" component={Terminal} />
                   <Route component={PageNotFound}/>
-                </Switch>
+
           </div>
           </Router>
         )
