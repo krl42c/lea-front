@@ -21,11 +21,15 @@
 }
 .div-cuerpo{
   padding: 2%;
-  border: solid red 2px;
+  /*border: solid red 2px;*/
+}
+.div-log{
+  margin: auto;
+  width: 60%;
 }
 .div-graficas{
   padding: 1%;
-  border: solid green 2px;
+  /*border: solid green 2px;*/
   display:flex;
   align-items: center;
   text-align: center;
@@ -33,25 +37,25 @@
 .div-ram{
 
   margin: auto;
-  border: solid yellow 2px;
+  /*border: solid yellow 2px;*/
   width: 20%;
 }
 .div-bateria{
 
   margin: auto;
-  border: solid yellow 2px;
+  /*border: solid yellow 2px;*/
   width: 20%;
 }
 .div-cpu{
 
   margin: auto;
-  border: solid yellow 2px;
+  /*border: solid yellow 2px;*/
   width: 20%;
 }
 .div-disk{
 
   margin: auto;
-  border: solid yellow 2px;
+  /*border: solid yellow 2px;*/
   width: 20%;
 }
 .div-terminal{

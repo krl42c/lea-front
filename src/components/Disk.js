@@ -30,7 +30,7 @@ export class Disk extends React.Component {
 			usage : json.Value
 		})
 	  });
-    this.interval = setInterval(() => this.tick(), 2000);
+    this.interval = setInterval(() => this.tick(), 60000);
   }
   componentWillUnmount() {
     clearInterval(this.interval);

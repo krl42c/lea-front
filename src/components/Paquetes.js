@@ -31,7 +31,7 @@ export class Paquetes extends React.Component {
                   <input class="form-control" placeholder="Firefox" id="nombre_paquete" name="nombre_paquete" onChange={event => this.setState({package: event.target.value})}/>
               </div>
                   <br />
-                <button onClick="" type="submit" class="btn btn-primary ml-3 mr-3 mb-3" onClick={this.installPackage(this.state.package)}>Instalar</button>
+                <button type="submit" class="btn btn-primary ml-3 mr-3 mb-3" onClick={this.installPackage(this.state.package)}>Instalar</button>
                 <button onClick="" type="submit" class="btn btn-danger mb-3">Desinstalar</button>
               </form>
           </div>

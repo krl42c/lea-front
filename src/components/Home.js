@@ -16,11 +16,24 @@ export class Home extends React.Component {
 
             <header data-aos="zoom-out-down" className='header'>
               <h1>Linux Easy Admin</h1>
-              <p>Bienvenido a Linux Easy Admin, tener el control de tu PC en Linux nunca había sido tan fácil</p>
 
             </header>
 
             <div className='div-cuerpo'>
+
+            <div className='div-log'>
+              <form data-aos="fade-left" class="m-4 p-3 border border-primary rounded text-white">
+              <div class="form-group p-3">
+                  <label>Usuario</label>
+                  <input class="form-control mb-2" placeholder="Usuario" id="usuario" name="usuario"/>
+                  <label>Contraseña</label>
+                  <input class="form-control mb-2" type="password" placeholder="Contraseña" id="password" name="password"/>
+                  <label>Servidor</label>
+                  <input class="form-control mb-2" placeholder="IP del Servidor" id="usuario" name="usuario"/>
+              </div>
+                <button type="submit" class="btn btn-primary ml-3 mr-3 mb-3">Confirmar</button>
+              </form>
+            </div>
 
               <div className='div-graficas'>
 
