@@ -22,6 +22,21 @@ export class Paquetes extends React.Component {
             })
 		}
     }
+
+    uninstallPackage(package_name) {
+		return function() {
+            fetch("/api/package/delete", {
+                method:"POST",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: package_name
+                })
+            })
+		}
+    }
     render() {
         return(
           <div>
@@ -32,7 +47,7 @@ export class Paquetes extends React.Component {
               </div>
                   <br />
                 <button type="submit" class="btn btn-primary ml-3 mr-3 mb-3" onClick={this.installPackage(this.state.package)}>Instalar</button>
-                <button onClick="" type="submit" class="btn btn-danger mb-3">Desinstalar</button>
+                <button type="submit" class="btn btn-danger mb-3" onClick={this.uninstallPackage(this.state.package)}>Desinstalar</button>
               </form>
           </div>
 
