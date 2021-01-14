@@ -44,15 +44,16 @@ export class Heading extends React.Component {
                     </nav>
                 </div>
 
-            		
 
-              		<Route path="/Home" component={Home} />
+                <Switch>
+              		<Route exact path="/" component={Home} />
+                  <Route exact path="/home" component={Home} />
                   <Route path="/users" component={Users} />
                   <Route path="/process" component={Process} />
                   <Route path="/create_user" component={CreateUser} />
                   <Route path="/paquetes" component={Paquetes} />
                   <Route path="/consola" component={Terminal} />
-
+              </Switch>
           </div>
           </Router>
         )
