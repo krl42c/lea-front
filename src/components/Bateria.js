@@ -18,7 +18,7 @@ export class Bateria extends React.Component {
       .then(res => res.json())
       .then(json => {
         this.setState({
-            usage : json.Value
+            Value : json.Value
         })
       });
   }
@@ -27,7 +27,7 @@ export class Bateria extends React.Component {
       .then(res => res.json())
       .then(json => {
         this.setState({
-            usage : json.Value
+            Value : json.Value
         })
       });
     this.interval = setInterval(() => this.tick(), 60000);
