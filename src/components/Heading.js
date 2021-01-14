@@ -7,7 +7,6 @@ import { Home } from './Home';
 import { Paquetes } from './Paquetes';
 import { Terminal } from './terminal';
 import { BrowserRouter as Router,Switch,Route,Link,Redirect} from 'react-router-dom';
-import PageNotFound from './PageNotFound';
 export class Heading extends React.Component {
     constructor(props) {
         super();
@@ -55,7 +54,6 @@ export class Heading extends React.Component {
                   <Route path="/create_user" component={CreateUser} />
                   <Route path="/paquetes" component={Paquetes} />
                   <Route path="/consola" component={Terminal} />
-                  <Route component={PageNotFound}/>
 
           </div>
           </Router>
