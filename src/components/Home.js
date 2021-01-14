@@ -1,6 +1,7 @@
 import React from 'react';
 import { Bateria } from './Bateria';
 import { CPU } from './CPU';
+import { Disk } from './Disk';
 import { Parallax } from 'react-parallax';
 import { MemoriaRam } from './MemoriaRam';
 import { Timer } from './timer';
@@ -36,6 +37,11 @@ export class Home extends React.Component {
                 <div data-aos="flip-right" className='div-cpu'>
                     <h2>CPU:</h2>
                     <CPU/>
+                </div>
+
+                <div data-aos="flip-right" className='div-disk'>
+                    <h2> Disco duro: </h2>
+                    <Disk/>
                 </div>
 
               </div>
