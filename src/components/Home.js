@@ -21,25 +21,31 @@ export class Home extends React.Component {
           <div className='div-body'>
 
             <header data-aos="zoom-out-down" className='header'>
-              <h1>Linux Easy Admin</h1>
 
+              <div className='div-log'>
+                <form data-aos="fade-left" class="m-3 p-3 border border-primary rounded text-white">
+                <div class="form-group">
+                    <label>Usuario</label>
+                    <input class="form-control mb-2" placeholder="Usuario" id="usuario" name="usuario"/>
+                    <label>Contraseña</label>
+                    <input class="form-control mb-2" type="password" placeholder="Contraseña" id="password" name="password"/>
+                    <label>Servidor</label>
+                    <input class="form-control" placeholder="IP del Servidor" id="usuario" name="usuario"/>
+                </div>
+                  <button type="submit" class="form-control btn btn-primary w-50">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                  </button>
+                </form>
+              </div>
+
+              <h1>Linux Easy Admin</h1>
             </header>
 
             <div className='div-cuerpo'>
 
-            <div className='div-log'>
-              <form data-aos="fade-left" class="m-4 p-3 border border-primary rounded text-white">
-              <div class="form-group p-3">
-                  <label>Usuario</label>
-                  <input class="form-control mb-2" placeholder="Usuario" id="usuario" name="usuario"/>
-                  <label>Contraseña</label>
-                  <input class="form-control mb-2" type="password" placeholder="Contraseña" id="password" name="password"/>
-                  <label>Servidor</label>
-                  <input class="form-control mb-2" placeholder="IP del Servidor" id="usuario" name="usuario"/>
-              </div>
-                <button type="submit" class="btn btn-primary ml-3 mr-3 mb-3">Confirmar</button>
-              </form>
-            </div>
+
 
               <div className='div-graficas'>
 
