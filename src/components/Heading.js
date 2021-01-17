@@ -6,6 +6,11 @@ import { Ram } from './Ram';
 import { Home } from './Home';
 import { Paquetes } from './Paquetes';
 import { Apagar } from './apagar';
+import { InfoRam } from './infoRam';
+import { InfoBattery } from './infoBattery';
+import { InfoCPU } from './infoCPU';
+import { InfoDisk } from './infoDisk';
+
 import { BrowserRouter as Router,Switch,Route,Link,Redirect} from 'react-router-dom';
 export class Heading extends React.Component {
     constructor(props) {
@@ -51,6 +56,10 @@ export class Heading extends React.Component {
                   <Route path="/process" component={Process} />
                   <Route path="/create_user" component={CreateUser} />
                   <Route path="/paquetes" component={Paquetes} />
+                  <Route path="/infoRam" component={InfoRam} />
+                  <Route path="/infoCPU" component={InfoCPU} />
+                  <Route path="/infoDisk" component={InfoDisk} />
+                  <Route path="/infoBattery" component={InfoBattery} />
 
               </Switch>
           </div>

@@ -1,6 +1,5 @@
 import React from 'react';
 import swal from 'sweetalert';
-import { BrowserRouter as Router,Switch,Route,Link} from 'react-router-dom';
 
 export class Apagar extends React.Component {
     constructor(props) {

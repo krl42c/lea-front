@@ -104,14 +104,7 @@ export class Home extends React.Component {
               </div>
 
             </div>
-            <Switch>
-              <Route exact path="/infoRam" component={InfoRam} />
-              <Route path="/users" component={Users} />
-              <Route path="/process" component={Process} />
-              <Route path="/create_user" component={CreateUser} />
-              <Route path="/paquetes" component={Paquetes} />
-
-          </Switch>
+            
 
           </div>
 
