@@ -53,9 +53,9 @@ mostrarAlerta(s){
             <div className="div-listas">
 
                 <form class="form-inline my-2 my-lg-0">
-                    <Link data-aos="fade-right" data-aos-duration="500" to="/create_user" class="btn btn-primary m-3" role="button"> Crear usuario </Link>
+                    <Link data-aos="fade-right" data-aos-duration="1000" to="/create_user" class="btn btn-primary m-3" role="button"> Crear usuario </Link>
                 </form>
-            <ul class="list-group list-group-flush">
+            <ul data-aos="fade-right" data-aos-duration="1000" class="list-group list-group-flush">
 
                    { this.state.userList.map(s => (  <li class="fondo list-group-item text-white"> {s}
 

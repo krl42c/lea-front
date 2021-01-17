@@ -17,7 +17,7 @@ export class Home extends React.Component {
 
    render() {
         return(
-          <Router>
+
           <div className='div-body'>
 
             <header data-aos="zoom-out-down" className='header'>
@@ -52,7 +52,7 @@ export class Home extends React.Component {
                 <div data-aos="flip-left" className='div-ram'>
                   <h2>Memoria Ram:</h2>
                   <MemoriaRam/>
-                  <Link to="/infoRam">
+                  <Link to="/InfoRam">
                   <button class="btn btn-primary rounded-pill m-3 ">
                   Detalles
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right ml-1" viewBox="0 0 16 16">
@@ -106,12 +106,15 @@ export class Home extends React.Component {
             </div>
             <Switch>
               <Route exact path="/infoRam" component={InfoRam} />
-              <Route exact path="/infoCPU" component={InfoCPU} />
-              <Route exact path="/infoBattery" component={InfoBattery} />
-              <Route exact path="/infoDisk" component={InfoDisk} />
+              <Route path="/users" component={Users} />
+              <Route path="/process" component={Process} />
+              <Route path="/create_user" component={CreateUser} />
+              <Route path="/paquetes" component={Paquetes} />
+
           </Switch>
+
           </div>
-          </Router>
+
         )
     }
 }

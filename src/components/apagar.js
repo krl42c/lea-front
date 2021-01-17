@@ -9,18 +9,17 @@ export class Apagar extends React.Component {
             value : null
         };
     }
-
-    componentDidMount() {
-        fetch("/api/shutdown")
-          .then(res => res.json())
-          .then(json => {
-            this.setState({
-                Value : json.Value
-            });
+    apagar(){
+      fetch("/api/shutdown")
+        .then(res => res.json())
+        .then(json => {
+          this.setState({
+              Value : json.Value
           });
-      }
+        });
+    }
 
-mostrarAlerta(s){
+mostrarAlerta(){
   swal({
     title: "Aviso",
     text: "¿Estas seguro que quieres apagar el equipo?",
@@ -28,15 +27,14 @@ mostrarAlerta(s){
     buttons:["No","Si"]
   }).then(respuesta=>{
     if(respuesta){
-      swal({text:"Usuario borrado con exito",
-    icon:"success"})
+      {this.apagar()}
     }
   })
 }
     render() {
         return(
           <div>
-            <button class="btn btn-danger ml-2" onClick={(event) => {this.componentDidMount()}}>Apagar</button>
+            <button class="btn btn-danger ml-2" onClick={(event) => {this.mostrarAlerta()}}>Apagar</button>
           </div>
         )
 

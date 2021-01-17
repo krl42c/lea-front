@@ -7,7 +7,7 @@ export class InfoRam extends React.Component {
     render() {
         return(
           <div>
-          <p>Info Ram</p>
+            <h1>holalalaladfasjh</h1>
           </div>
         )
     }

@@ -50,7 +50,7 @@ export class Process extends React.Component {
         return(
             //<div> {this.state.userList.map(s => (<li>{s}</li>))} </div>
             <div className="div-listas">
-            <ul class="list-group list-group-flush">
+            <ul data-aos="fade-right" data-aos-duration="1000" class="list-group list-group-flush">
                    { this.state.processList.map(s => (  <li class="fondo list-group-item text-white"> {s}
 
                         <button class="btn btn-danger" href="" onClick={this.stopProcess({s})}>
