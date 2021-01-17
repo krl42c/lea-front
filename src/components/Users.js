@@ -50,14 +50,14 @@ mostrarAlerta(s){
     render() {
         return(
             //<div> {this.state.userList.map(s => (<li>{s}</li>))} </div>
-            <div>
+            <div className="div-listas">
 
                 <form class="form-inline my-2 my-lg-0">
                     <Link data-aos="fade-right" data-aos-duration="500" to="/create_user" class="btn btn-primary m-3" role="button"> Crear usuario </Link>
                 </form>
             <ul class="list-group list-group-flush">
 
-                   { this.state.userList.map(s => (  <li class="list-group-item bg-dark text-white"> {s}
+                   { this.state.userList.map(s => (  <li class="fondo list-group-item text-white"> {s}
 
                    <button class="btn btn-danger ml-2" href="" onClick={(event) => {this.mostrarAlerta({s})}}>
                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">

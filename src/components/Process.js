@@ -49,9 +49,9 @@ export class Process extends React.Component {
     render() {
         return(
             //<div> {this.state.userList.map(s => (<li>{s}</li>))} </div>
-            <div>
+            <div className="div-listas">
             <ul class="list-group list-group-flush">
-                   { this.state.processList.map(s => (  <li class="list-group-item bg-dark text-white"> {s}
+                   { this.state.processList.map(s => (  <li class="fondo list-group-item text-white"> {s}
 
                         <button class="btn btn-danger" href="" onClick={this.stopProcess({s})}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">

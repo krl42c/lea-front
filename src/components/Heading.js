@@ -16,7 +16,7 @@ export class Heading extends React.Component {
           <Router>
          <div>
                 <div data-aos="fade-down" className='div-barra-busqueda'>
-                    <nav class="navbar navbar-expand-lg navbar-dark shadow p-3 rounded bg-dark">
+                    <nav class="navbar navbar-expand-lg navbar-dark shadow p-3 rounded ">
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>

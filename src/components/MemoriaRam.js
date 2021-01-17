@@ -39,8 +39,8 @@ export class MemoriaRam extends React.Component {
       backgroundPadding={6}
       styles={buildStyles({
         backgroundColor: " #ecf0f1 ",
-        textColor: " #2e86c1 ",
-        pathColor: " #2e86c1 ",
+        textColor: " #0d6efd ",
+        pathColor: " #0d6efd ",
         trailColor: "transparent",
         textSize: '16px'
       })}
