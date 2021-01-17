@@ -1,6 +1,3 @@
-
-
-import logo from './images/logo.svg';
 import './css/App.css';
 import { Ram } from './components/Ram';
 import { MemoriaRam } from './components/MemoriaRam';
