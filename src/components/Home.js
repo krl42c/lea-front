@@ -2,12 +2,12 @@ import React from 'react';
 import { Bateria } from './Bateria';
 import { CPU } from './CPU';
 import { Disk } from './Disk';
-import { Parallax } from 'react-parallax';
 import { MemoriaRam } from './MemoriaRam';
 import { InfoRam } from './infoRam';
 import { InfoBattery } from './infoBattery';
 import { InfoCPU } from './infoCPU';
 import { InfoDisk } from './infoDisk';
+
 
 import { BrowserRouter as Router,Switch,Route,Link,Redirect} from 'react-router-dom';
 export class Home extends React.Component {

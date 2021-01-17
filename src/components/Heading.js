@@ -5,6 +5,7 @@ import { CreateUser } from './CreateUser';
 import { Ram } from './Ram';
 import { Home } from './Home';
 import { Paquetes } from './Paquetes';
+import { Apagar } from './apagar';
 import { BrowserRouter as Router,Switch,Route,Link,Redirect} from 'react-router-dom';
 export class Heading extends React.Component {
     constructor(props) {
@@ -38,6 +39,7 @@ export class Heading extends React.Component {
 
                         </ul>
                     </div>
+                    <Apagar/>
                     </nav>
                 </div>
 

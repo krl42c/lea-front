@@ -1,11 +1,6 @@
 import './css/App.css';
-import { Ram } from './components/Ram';
-import { MemoriaRam } from './components/MemoriaRam';
-import { Bateria } from './components/Bateria';
-import { useEffect, useState } from 'react';
-import { Parallax } from 'react-parallax';
-
 import { Heading } from './components/Heading';
+import { useEffect, useState } from 'react';
 
 import AOS from 'aos';
 
