@@ -1,4 +1,5 @@
 import React from 'react';
+import { PieChart } from 'react-minimal-pie-chart';
 
 export class InfoDisk extends React.Component {
   constructor(props) {
@@ -8,7 +9,7 @@ export class InfoDisk extends React.Component {
       };
   }
     componentDidMount() {
-        fetch("/api/ram/process")
+        fetch("/api/disk_folders")
           .then(res => res.json())
           .then(json => {
             this.setState({
@@ -18,7 +19,15 @@ export class InfoDisk extends React.Component {
       }
     render() {
         return(
-          <p>Info Disk</p>
+          PieChart
+          data={[
+            {this.state.data.map(Proceso => {
+            return (
+              { title: Proceso.name, value: Proceso.Value, color: '#E38627' }
+            );
+          })}
+  ]}
+/>;
         )
     }
 }
