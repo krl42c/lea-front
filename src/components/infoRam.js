@@ -4,22 +4,18 @@ export class InfoRam extends React.Component {
   constructor(props) {
       super();
       this.state = {
-        Name: null,
-        Value : null
+        data : []
       };
   }
-  componentDidMount() {
-      fetch("/api/ram/process")
-        .then(res => res.json())
-        .then(json => {
-          this.setState({
-            data: resoponseArray.map(item => {
-              Name: json.Name,
-              Value: json.Value})
-
-          })
-        });
-    }
+    componentDidMount() {
+        fetch("/api/ram/process")
+          .then(res => res.json())
+          .then(json => {
+            this.setState({
+                data : Object.values(json)
+            });
+          });
+      }
 
     render() {
         return(
@@ -35,12 +31,9 @@ export class InfoRam extends React.Component {
               </tr>
             </thead>
             <tbody>
-            { this.state.data.map(s => (  <tr scope="row" class=" text-white">
-              <td>{s}</td>
-
-
-
-            </tr>))}
+                {
+                }
+             {this.state.data.map(Proceso => <li>{Proceso.Name} :  {Proceso.Value} </li>)}
               <tr>
                 <th scope="row">1</th>
                 <td>Mark</td>
@@ -48,6 +41,7 @@ export class InfoRam extends React.Component {
                 <td>@mdo</td>
                 <td>aaaa</td>
               </tr>
+
             </tbody>
             </table>
           </div>

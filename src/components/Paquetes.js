@@ -1,5 +1,5 @@
 import React from 'react';
-
+import swal from 'sweetalert';
 export class Paquetes extends React.Component {
     constructor(props) {
         super();
@@ -54,6 +54,14 @@ export class Paquetes extends React.Component {
 		}
     }
 
+    mostrarAlerta(){
+      swal({
+        title: "Aviso",
+        text: "El gestor de paquetes está ocupado",
+        icon: "warning",
+      })
+    }
+
     render() {
         return(
           <div>
@@ -71,7 +79,7 @@ export class Paquetes extends React.Component {
             {
               this.state.locked?
 
-              <h2> El gestor de paquetes está ocupado </h2>
+              this.mostrarAlerta()
 
               :
 
