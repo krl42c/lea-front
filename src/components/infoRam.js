@@ -19,28 +19,24 @@ export class InfoRam extends React.Component {
 
     render() {
         return(
-          <div>
+          <div className="div-tablas">
           <table class="table text-white">
             <thead>
               <tr>
-                <th scope="col"></th>
                 <th scope="col">Proceso</th>
                 <th scope="col">Uso de la Ram</th>
-                <th scope="col">Ruta</th>
-                <th scope="col">Usuario</th>
               </tr>
             </thead>
             <tbody>
-                {
-                }
-             {this.state.data.map(Proceso => <li>{Proceso.Name} :  {Proceso.Value} </li>)}
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>aaaa</td>
-              </tr>
+             {this.state.data.map(Proceso => {
+             return (
+               <tr key={Proceso.Name}>
+                 <td>{Proceso.Name}</td>
+                 <td>{Proceso.Value}</td>
+
+               </tr>
+             );
+           })}
 
             </tbody>
             </table>
