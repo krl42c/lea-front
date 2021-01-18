@@ -56,6 +56,7 @@ export class Heading extends React.Component {
                   <Route path="/process" component={Process} />
                   <Route path="/create_user" component={CreateUser} />
                   <Route path="/paquetes" component={Paquetes} />
+
                   <Route path="/infoRam" component={InfoRam} />
                   <Route path="/infoCPU" component={InfoCPU} />
                   <Route path="/infoDisk" component={InfoDisk} />
