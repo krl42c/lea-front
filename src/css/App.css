@@ -61,7 +61,11 @@
 .div-listas li{
   border-color: #19262d;
 }
-.div-tablas table thead tr th{
+.div-tablas{
+  margin: 1%;
+  border-color: #19262d;
+}
+.div-tablas table tbody tr th{
   border-color: #19262d;
 }
 .fondo{

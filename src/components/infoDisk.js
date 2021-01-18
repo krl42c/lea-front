@@ -17,17 +17,32 @@ export class InfoDisk extends React.Component {
             });
           });
       }
+
     render() {
-        return(
-          PieChart
-          data={[
-            {this.state.data.map(Proceso => {
-            return (
-              { title: Proceso.name, value: Proceso.Value, color: '#E38627' }
-            );
-          })}
-  ]}
-/>;
-        )
+      return(
+        <div class="div-tablas">
+        <table class="table text-white">
+          <thead>
+            <tr>
+              <th scope="col">Nombre</th>
+              <th scope="col">Tamaño</th>
+            </tr>
+          </thead>
+          <tbody>
+           {this.state.data.map(carpeta => {
+           return (
+             <tr key={carpeta.Name}>
+               <td>{carpeta.Name}</td>
+               <td>{carpeta.Value}</td>
+
+             </tr>
+           );
+         })}
+
+          </tbody>
+          </table>
+        </div>
+      )
+
     }
 }
