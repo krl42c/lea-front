@@ -1,5 +1,5 @@
 import React from 'react';
-import { PieChart } from 'react-minimal-pie-chart';
+import GoBack from './atras';
 
 export class InfoDisk extends React.Component {
   constructor(props) {
@@ -20,7 +20,8 @@ export class InfoDisk extends React.Component {
 
     render() {
       return(
-        <div class="div-tablas">
+        <div data-aos="fade-right" class="div-tablas">
+        <GoBack/>
         <table class="table text-white">
           <thead>
             <tr>

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import GoBack from './atras';
 export class InfoRam extends React.Component {
   constructor(props) {
       super();
@@ -19,7 +19,8 @@ export class InfoRam extends React.Component {
 
     render() {
         return(
-          <div className="div-tablas">
+          <div data-aos="fade-right" className="div-tablas">
+          <GoBack/>
           <table class="table text-white">
             <thead>
               <tr>
@@ -32,7 +33,7 @@ export class InfoRam extends React.Component {
              return (
                <tr key={Proceso.Name}>
                  <td>{Proceso.Name}</td>
-                 <td>{Proceso.Value}</td>
+                 <td>{Proceso.Value} %</td>
 
                </tr>
              );
