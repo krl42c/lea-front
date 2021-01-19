@@ -23,6 +23,13 @@ export class MemoriaRam extends React.Component {
       });
   }
   componentDidMount() {
+    fetch("/api/ram")
+      .then(res => res.json())
+      .then(json => {
+        this.setState({
+            usage : json.Value
+        })
+      });
     this.interval = setInterval(() => this.tick(), 1000);
   }
   componentWillUnmount() {

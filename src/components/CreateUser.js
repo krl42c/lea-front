@@ -1,4 +1,5 @@
 import React from 'react';
+import GoBack from './atras';
 
 export class CreateUser extends React.Component {
     constructor(props) {
@@ -41,7 +42,8 @@ export class CreateUser extends React.Component {
 
     render() {
         return(
-            <div>
+            <div data-aos="fade-right">
+            <GoBack/>
                 <form class="m-4 p-3 border border-primary rounded text-white">
                 <div class="form-group">
                     <label >Nombre de Usuario</label>
