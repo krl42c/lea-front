@@ -10,7 +10,8 @@ export class Bateria extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
-          usage : null
+          Value : null,
+          plug: false
       };
   }
   tick() {
@@ -18,7 +19,8 @@ export class Bateria extends React.Component {
       .then(res => res.json())
       .then(json => {
         this.setState({
-            Value : json.Value
+            Value : json.Value,
+            plug : json.Plug
         })
       });
   }
@@ -38,6 +40,7 @@ export class Bateria extends React.Component {
     render() {
 
         return(
+          <div>
           <CircularProgressbar
       value={this.state.Value}
       text={`${this.state.Value}%`}
@@ -50,7 +53,18 @@ export class Bateria extends React.Component {
         trailColor: "transparent",
         textSize: '16px'
       })}
-    />
+    />         
+      <br />
+          {
+              this.state.plug?
+
+              <p> Conectado </p>
+
+              :
+
+              <p> Desconectado </p>
+            }
+    </div>
 
 
         )
