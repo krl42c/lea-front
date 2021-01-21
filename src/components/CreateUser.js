@@ -47,11 +47,11 @@ export class CreateUser extends React.Component {
                 <form class="m-4 p-3 border border-primary rounded text-white">
                 <div class="form-group">
                     <label >Nombre de Usuario</label>
-                    <input class="form-control" id="user_name" name="usuario" pattern="[A-Za-z]" onChange={event => this.setState({username: event.target.value})}/>
+                    <input class="form-control" id="user_name" name="usuario" pattern="[A-Za-z]{1,50}" onChange={event => this.setState({username: event.target.value})}/>
                 </div>
                 <div class="form-group">
                     <label>Contraseña</label>
-                    <input type="password" class="form-control" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])" onChange={event => this.setState({password: event.target.value})}/>
+                    <input type="password" class="form-control" id="password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{3,}$" onChange={event => this.setState({password: event.target.value})}/>
                 </div>
                     <br />
                 <button onClick={this.saveUser(this.state.username,this.state.password)} type="submit" class="btn btn-primary">Guardar</button>

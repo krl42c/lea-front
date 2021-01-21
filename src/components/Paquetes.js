@@ -5,7 +5,8 @@ export class Paquetes extends React.Component {
         super();
         this.state = {
             package: null,
-            locked: false
+            locked: false,
+            packageList: []
         }
         this.checkLocked();
     }
@@ -74,6 +75,17 @@ export class Paquetes extends React.Component {
         }
       })
     }
+
+    componentDidMount() {
+        fetch("/api/package/list")
+          .then(res => res.json())
+          .then(json => {
+            this.setState({
+                packageList : Object.values(json)
+            });
+          });
+      }
+
     render() {
         return(
           <div>
@@ -97,6 +109,26 @@ export class Paquetes extends React.Component {
 
               <div></div>
             }
+          <div data-aos="fade-right" className="div-tablas">
+          <table class="table text-white">
+            <thead>
+              <tr>
+                <th scope="col">Paquete</th>
+              </tr>
+            </thead>
+            <tbody>
+             {this.state.packageList.map(Package => {
+             return (
+               <tr key={Package.Name}>
+                 <td>{Package.Name}</td>
+
+               </tr>
+             );
+           })}
+
+            </tbody>
+            </table>
+          </div>
           </div>
 
         )
