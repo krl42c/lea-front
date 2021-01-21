@@ -43,7 +43,7 @@ export class Bateria extends React.Component {
           <div>
           <CircularProgressbar
       value={this.state.Value}
-      text={`${this.state.Value}%`}
+      text={`${this.state.Value}`}
       background
       backgroundPadding={6}
       styles={buildStyles({
@@ -54,17 +54,7 @@ export class Bateria extends React.Component {
         textSize: '16px'
       })}
     />         
-      <br />
-          {
-              this.state.plug?
-
-              <p> Conectado </p>
-
-              :
-
-              <p> Desconectado </p>
-            }
-    </div>
+         </div>
 
 
         )
